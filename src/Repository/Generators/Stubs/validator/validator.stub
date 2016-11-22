@@ -1,0 +1,15 @@
+<?php
+
+$NAMESPACE$
+
+use \BrianFaust\Validator\Contracts\ValidatorInterface;
+use \BrianFaust\Validator\LaravelValidator;
+
+class $CLASS$Validator extends LaravelValidator
+{
+
+    protected $rules = [
+        ValidatorInterface::RULE_CREATE => $RULES$,
+        ValidatorInterface::RULE_UPDATE => $RULES$,
+   ];
+}

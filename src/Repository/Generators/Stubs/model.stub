@@ -1,0 +1,15 @@
+<?php
+
+$NAMESPACE$
+
+use Illuminate\Database\Eloquent\Model;
+use BrianFaust\Repository\Contracts\Transformable;
+use BrianFaust\Repository\Traits\TransformableTrait;
+
+class $CLASS$ extends Model implements Transformable
+{
+    use TransformableTrait;
+
+    protected $fillable = $FILLABLE$;
+
+}
