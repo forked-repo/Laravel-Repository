@@ -8,11 +8,11 @@
 
 ### Validators
 
-Requires [prettus/laravel-validator](https://github.com/prettus/laravel-validator). `composer require prettus/laravel-validator`
+Requires [faustbrian/laravel-validator](https://github.com/faustbrian/laravel-validator). `composer require faustbrian/laravel-validator`
 
-Easy validation with `prettus/laravel-validator`
+Easy validation with `faustbrian/laravel-validator`
 
-[For more details click here](https://github.com/prettus/laravel-validator)
+[For more details click here](https://github.com/faustbrian/laravel-validator)
 
 #### Using a Validator Class
 

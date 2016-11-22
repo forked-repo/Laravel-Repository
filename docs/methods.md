@@ -1,11 +1,11 @@
 ## Table of Contents
 
 - <a href="#methods">Methods</a>
-    - <a href="#prettusrepositorycontractsrepositoryinterface">RepositoryInterface</a>
-    - <a href="#prettusrepositorycontractsrepositorycriteriainterface">RepositoryCriteriaInterface</a>
-    - <a href="#prettusrepositorycontractscacheableinterface">CacheableInterface</a>
-    - <a href="#prettusrepositorycontractspresenterinterface">PresenterInterface</a>
-    - <a href="#prettusrepositorycontractscriteriainterface">CriteriaInterface</a>
+    - <a href="#faustbrianrepositorycontractsrepositoryinterface">RepositoryInterface</a>
+    - <a href="#faustbrianrepositorycontractsrepositorycriteriainterface">RepositoryCriteriaInterface</a>
+    - <a href="#faustbrianrepositorycontractscacheableinterface">CacheableInterface</a>
+    - <a href="#faustbrianrepositorycontractspresenterinterface">PresenterInterface</a>
+    - <a href="#faustbrianrepositorycontractscriteriainterface">CriteriaInterface</a>
 
 ## Methods
 

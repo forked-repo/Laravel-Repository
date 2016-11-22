@@ -137,7 +137,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
                     return $validator;
                 }
             } else {
-                throw new Exception(trans('repository::packages.prettus_laravel_validation_required'));
+                throw new Exception(trans('repository::packages.faustbrian_laravel_validation_required'));
             }
         }
     }
