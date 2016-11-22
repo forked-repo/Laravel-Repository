@@ -179,7 +179,7 @@ protected $fieldSearchable = [
 
 Request all data without filter by request
 
-`http://prettus.local/users`
+`http://local.dev/users`
 
 ```json
 [
@@ -209,23 +209,23 @@ Request all data without filter by request
 
 Conducting research in the repository
 
-`http://prettus.local/users?search=John%20Doe`
+`http://local.dev/users?search=John%20Doe`
 
 or
 
-`http://prettus.local/users?search=John&searchFields=name:like`
+`http://local.dev/users?search=John&searchFields=name:like`
 
 or
 
-`http://prettus.local/users?search=john@gmail.com&searchFields=email:=`
+`http://local.dev/users?search=john@gmail.com&searchFields=email:=`
 
 or
 
-`http://prettus.local/users?search=name:John Doe;email:john@gmail.com`
+`http://local.dev/users?search=name:John Doe;email:john@gmail.com`
 
 or
 
-`http://prettus.local/users?search=name:John;email:john@gmail.com&searchFields=name:like;email:=`
+`http://local.dev/users?search=name:John;email:john@gmail.com&searchFields=name:like;email:=`
 
 ```json
 [
@@ -241,7 +241,7 @@ or
 
 Filtering fields
 
-`http://prettus.local/users?filter=id;name`
+`http://local.dev/users?filter=id;name`
 
 ```json
 [
@@ -262,7 +262,7 @@ Filtering fields
 
 Sorting the results
 
-`http://prettus.local/users?filter=id;name&orderBy=id&sortedBy=desc`
+`http://local.dev/users?filter=id;name&orderBy=id&sortedBy=desc`
 
 ```json
 [
@@ -283,7 +283,7 @@ Sorting the results
 
 Sorting through related tables
 
-`http://prettus.local/users?orderBy=posts|title&sortedBy=desc`
+`http://local.dev/users?orderBy=posts|title&sortedBy=desc`
 
 Query will have something like this
 
@@ -295,7 +295,7 @@ ORDER BY title
 ...
 ```
 
-`http://prettus.local/users?orderBy=posts:custom_id|posts.title&sortedBy=desc`
+`http://local.dev/users?orderBy=posts:custom_id|posts.title&sortedBy=desc`
 
 Query will have something like this
 
@@ -310,7 +310,7 @@ ORDER BY posts.title
 
 Add relationship
 
-`http://prettus.local/users?with=groups`
+`http://local.dev/users?with=groups`
 
 
 
