@@ -314,7 +314,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
     }
 
     /**
-     * Retrieve first data of repository, or return new Entity
+     * Retrieve first data of repository, or return new Entity.
      *
      * @param array $attributes
      *

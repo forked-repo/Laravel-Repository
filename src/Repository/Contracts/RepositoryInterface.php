@@ -169,9 +169,9 @@ interface RepositoryInterface
     public function with($relations);
 
     /**
-     * Load relation with closure
+     * Load relation with closure.
      *
-     * @param string $relation
+     * @param string  $relation
      * @param closure $closure
      *
      * @return $this
