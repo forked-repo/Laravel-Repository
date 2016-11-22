@@ -2,9 +2,9 @@
 
 namespace BrianFaust\Repository\Generators\Commands;
 
-use Illuminate\Console\Command;
 use BrianFaust\Repository\Generators\CriteriaGenerator;
 use BrianFaust\Repository\Generators\FileAlreadyExistsException;
+use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -30,6 +30,7 @@ class CriteriaCommand extends Command
      * @var string
      */
     protected $type = 'Criteria';
+
     /**
      * Execute the command.
      */

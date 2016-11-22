@@ -245,7 +245,7 @@ abstract class Generator
         array_pop($segments);
         $rootNamespace = $this->getRootNamespace();
         if ($rootNamespace == false) {
-            return null;
+            return;
         }
 
         return 'namespace '.rtrim($rootNamespace.'\\'.implode($segments, '\\'), '\\').';';

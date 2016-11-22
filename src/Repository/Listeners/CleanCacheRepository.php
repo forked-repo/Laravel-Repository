@@ -2,12 +2,12 @@
 
 namespace BrianFaust\Repository\Listeners;
 
-use Illuminate\Contracts\Cache\Repository as CacheRepository;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Log;
 use BrianFaust\Repository\Contracts\RepositoryInterface;
 use BrianFaust\Repository\Events\RepositoryEventBase;
 use BrianFaust\Repository\Helpers\CacheKeys;
+use Illuminate\Contracts\Cache\Repository as CacheRepository;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Class CleanCacheRepository.

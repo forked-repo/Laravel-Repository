@@ -2,10 +2,10 @@
 
 namespace BrianFaust\Repository\Generators\Commands;
 
-use File;
-use Illuminate\Console\Command;
 use BrianFaust\Repository\Generators\BindingsGenerator;
 use BrianFaust\Repository\Generators\FileAlreadyExistsException;
+use File;
+use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

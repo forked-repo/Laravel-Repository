@@ -2,11 +2,11 @@
 
 namespace BrianFaust\Repository\Generators\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
 use BrianFaust\Repository\Generators\FileAlreadyExistsException;
 use BrianFaust\Repository\Generators\PresenterGenerator;
 use BrianFaust\Repository\Generators\TransformerGenerator;
+use Illuminate\Console\Command;
+use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

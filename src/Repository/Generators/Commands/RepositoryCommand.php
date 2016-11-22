@@ -2,13 +2,13 @@
 
 namespace BrianFaust\Repository\Generators\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Support\Collection;
 use BrianFaust\Repository\Generators\FileAlreadyExistsException;
 use BrianFaust\Repository\Generators\MigrationGenerator;
 use BrianFaust\Repository\Generators\ModelGenerator;
 use BrianFaust\Repository\Generators\RepositoryEloquentGenerator;
 use BrianFaust\Repository\Generators\RepositoryInterfaceGenerator;
+use Illuminate\Console\Command;
+use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

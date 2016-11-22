@@ -2,9 +2,9 @@
 
 namespace BrianFaust\Repository\Generators\Commands;
 
-use Illuminate\Console\Command;
 use BrianFaust\Repository\Generators\ControllerGenerator;
 use BrianFaust\Repository\Generators\FileAlreadyExistsException;
+use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

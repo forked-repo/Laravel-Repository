@@ -2,11 +2,11 @@
 
 namespace BrianFaust\Repository\Criteria;
 
+use BrianFaust\Repository\Contracts\CriteriaInterface;
+use BrianFaust\Repository\Contracts\RepositoryInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use BrianFaust\Repository\Contracts\CriteriaInterface;
-use BrianFaust\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class RequestCriteria.
@@ -200,7 +200,7 @@ class RequestCriteria implements CriteriaInterface
                 }
             }
 
-            return null;
+            return;
         }
 
         return $search;

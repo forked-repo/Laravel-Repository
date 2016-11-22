@@ -2,6 +2,7 @@
 
 namespace BrianFaust\Repository\Presenter;
 
+use BrianFaust\Repository\Contracts\PresenterInterface;
 use Exception;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Pagination\AbstractPaginator;
@@ -12,7 +13,6 @@ use League\Fractal\Pagination\IlluminatePaginatorAdapter;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Resource\Item;
 use League\Fractal\Serializer\SerializerAbstract;
-use BrianFaust\Repository\Contracts\PresenterInterface;
 
 /**
  * Class FractalPresenter.

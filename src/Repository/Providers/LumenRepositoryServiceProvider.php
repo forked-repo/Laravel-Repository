@@ -2,13 +2,13 @@
 
 namespace BrianFaust\Repository\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use BrianFaust\Repository\Generators\Commands\ControllerCommand;
 use BrianFaust\Repository\Generators\Commands\EntityCommand;
 use BrianFaust\Repository\Generators\Commands\PresenterCommand;
 use BrianFaust\Repository\Generators\Commands\RepositoryCommand;
 use BrianFaust\Repository\Generators\Commands\TransformerCommand;
 use BrianFaust\Repository\Generators\Commands\ValidatorCommand;
+use Illuminate\Support\ServiceProvider;
 
 /**
  * Class LumenRepositoryServiceProvider.

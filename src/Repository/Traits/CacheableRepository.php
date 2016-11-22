@@ -2,11 +2,11 @@
 
 namespace BrianFaust\Repository\Traits;
 
-use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use BrianFaust\Repository\Contracts\CriteriaInterface;
 use BrianFaust\Repository\Helpers\CacheKeys;
-use ReflectionObject;
 use Exception;
+use Illuminate\Contracts\Cache\Repository as CacheRepository;
+use ReflectionObject;
 
 /**
  * Class CacheableRepository.

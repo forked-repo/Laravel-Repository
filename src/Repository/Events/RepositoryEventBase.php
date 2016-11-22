@@ -2,8 +2,8 @@
 
 namespace BrianFaust\Repository\Events;
 
-use Illuminate\Database\Eloquent\Model;
 use BrianFaust\Repository\Contracts\RepositoryInterface;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class RepositoryEventBase.

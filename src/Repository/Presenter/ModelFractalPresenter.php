@@ -2,8 +2,8 @@
 
 namespace BrianFaust\Repository\Presenter;
 
-use Exception;
 use BrianFaust\Repository\Transformer\ModelTransformer;
+use Exception;
 
 /**
  * Class ModelFractalPresenter.

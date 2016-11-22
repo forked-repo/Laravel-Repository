@@ -2,13 +2,6 @@
 
 namespace BrianFaust\Repository\Eloquent;
 
-use Closure;
-use Exception;
-use Illuminate\Container\Container as Application;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 use BrianFaust\Repository\Contracts\CriteriaInterface;
 use BrianFaust\Repository\Contracts\Presentable;
 use BrianFaust\Repository\Contracts\PresenterInterface;
@@ -20,6 +13,13 @@ use BrianFaust\Repository\Events\RepositoryEntityUpdated;
 use BrianFaust\Repository\Exceptions\RepositoryException;
 use BrianFaust\Validator\Contracts\ValidatorInterface;
 use BrianFaust\Validator\Exceptions\ValidatorException;
+use Closure;
+use Exception;
+use Illuminate\Container\Container as Application;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 /**
  * Class BaseRepository.
@@ -119,7 +119,6 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
      */
     public function presenter()
     {
-        return null;
     }
 
     /**
@@ -141,8 +140,6 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
                 throw new Exception(trans('repository::packages.prettus_laravel_validation_required'));
             }
         }
-
-        return null;
     }
 
     /**
@@ -195,8 +192,6 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
 
             return $this->presenter;
         }
-
-        return null;
     }
 
     /**
@@ -219,8 +214,6 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
 
             return $this->validator;
         }
-
-        return null;
     }
 
     /**

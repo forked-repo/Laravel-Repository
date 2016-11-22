@@ -2,8 +2,8 @@
 
 namespace BrianFaust\Repository\Transformer;
 
-use League\Fractal\TransformerAbstract;
 use BrianFaust\Repository\Contracts\Transformable;
+use League\Fractal\TransformerAbstract;
 
 /**
  * Class ModelTransformer.

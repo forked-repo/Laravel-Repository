@@ -2,8 +2,8 @@
 
 namespace BrianFaust\Repository\Traits;
 
-use Illuminate\Support\Arr;
 use BrianFaust\Repository\Contracts\PresenterInterface;
+use Illuminate\Support\Arr;
 
 /**
  * Class PresentableTrait.
