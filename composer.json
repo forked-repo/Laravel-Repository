@@ -4,10 +4,6 @@
     "keywords": ["laravel", "repository", "eloquent", "model", "cache"],
     "license": "MIT",
     "authors": [{
-        "name": "Anderson Andrade",
-        "email": "contato@andersonandra.de",
-        "role": "Developer"
-    }, {
         "name": "Brian Faust",
         "email": "hello@brianfaust.de",
         "homepage": "https://brianfaust.de",
