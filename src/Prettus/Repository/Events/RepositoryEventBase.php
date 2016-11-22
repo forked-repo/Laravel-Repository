@@ -1,12 +1,12 @@
 <?php
+
 namespace Prettus\Repository\Events;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
- * Class RepositoryEventBase
- * @package Prettus\Repository\Events
+ * Class RepositoryEventBase.
  */
 abstract class RepositoryEventBase
 {

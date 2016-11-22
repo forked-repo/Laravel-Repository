@@ -1,9 +1,9 @@
 <?php
+
 namespace Prettus\Repository\Generators\Commands;
 
 use File;
 use Illuminate\Console\Command;
-use Illuminate\Support\Collection;
 use Prettus\Repository\Generators\BindingsGenerator;
 use Prettus\Repository\Generators\FileAlreadyExistsException;
 use Symfony\Component\Console\Input\InputArgument;
@@ -11,7 +11,6 @@ use Symfony\Component\Console\Input\InputOption;
 
 class BindingsCommand extends Command
 {
-
     /**
      * The name of command.
      *
@@ -33,17 +32,14 @@ class BindingsCommand extends Command
      */
     protected $type = 'Bindings';
 
-
     /**
      * Execute the command.
-     *
-     * @return void
      */
     public function fire()
     {
         try {
             $bindingGenerator = new BindingsGenerator([
-                'name' => $this->argument('name'),
+                'name'  => $this->argument('name'),
                 'force' => $this->option('force'),
             ]);
             // generate repository service provider
@@ -55,18 +51,17 @@ class BindingsCommand extends Command
                 $provider = File::get($bindingGenerator->getPath());
                 File::put($bindingGenerator->getPath(), vsprintf(str_replace('//', '%s', $provider), [
                     '//',
-                    $bindingGenerator->bindPlaceholder
+                    $bindingGenerator->bindPlaceholder,
                 ]));
             }
             $bindingGenerator->run();
-            $this->info($this->type . ' created successfully.');
+            $this->info($this->type.' created successfully.');
         } catch (FileAlreadyExistsException $e) {
-            $this->error($this->type . ' already exists!');
+            $this->error($this->type.' already exists!');
 
             return false;
         }
     }
-
 
     /**
      * The array of command arguments.
@@ -80,11 +75,10 @@ class BindingsCommand extends Command
                 'name',
                 InputArgument::REQUIRED,
                 'The name of model for which the controller is being generated.',
-                null
+                null,
             ],
         ];
     }
-
 
     /**
      * The array of command options.
@@ -99,7 +93,7 @@ class BindingsCommand extends Command
                 'f',
                 InputOption::VALUE_NONE,
                 'Force the creation if file already exists.',
-                null
+                null,
             ],
         ];
     }

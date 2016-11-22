@@ -1,4 +1,5 @@
 <?php
+
 namespace Prettus\Repository\Providers;
 
 use Illuminate\Support\ServiceProvider;
@@ -10,8 +11,7 @@ use Prettus\Repository\Generators\Commands\TransformerCommand;
 use Prettus\Repository\Generators\Commands\ValidatorCommand;
 
 /**
- * Class LumenRepositoryServiceProvider
- * @package Prettus\Repository\Providers
+ * Class LumenRepositoryServiceProvider.
  */
 class LumenRepositoryServiceProvider extends ServiceProvider
 {
@@ -24,8 +24,6 @@ class LumenRepositoryServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {

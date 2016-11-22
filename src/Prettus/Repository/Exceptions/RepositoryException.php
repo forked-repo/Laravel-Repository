@@ -1,13 +1,12 @@
 <?php
+
 namespace Prettus\Repository\Exceptions;
 
 use Exception;
 
 /**
- * Class RepositoryException
- * @package Prettus\Repository\Exceptions
+ * Class RepositoryException.
  */
 class RepositoryException extends Exception
 {
-
 }

@@ -7,19 +7,16 @@ use Prettus\Repository\Generators\Migrations\SchemaParser;
 use Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException;
 
 /**
- * Class MigrationGenerator
- * @package Prettus\Repository\Generators
+ * Class MigrationGenerator.
  */
 class MigrationGenerator extends Generator
 {
-
     /**
      * Get stub name.
      *
      * @var string
      */
     protected $stub = 'migration/plain';
-
 
     /**
      * Get base path of destination file.
@@ -28,9 +25,8 @@ class MigrationGenerator extends Generator
      */
     public function getBasePath()
     {
-        return app()->basePath() . '/database/migrations/';
+        return app()->basePath().'/database/migrations/';
     }
-
 
     /**
      * Get destination path for generated file.
@@ -39,9 +35,8 @@ class MigrationGenerator extends Generator
      */
     public function getPath()
     {
-        return $this->getBasePath() . $this->getFileName() . '.php';
+        return $this->getBasePath().$this->getFileName().'.php';
     }
-
 
     /**
      * Get generator path config node.
@@ -53,7 +48,6 @@ class MigrationGenerator extends Generator
         return '';
     }
 
-
     /**
      * Get root namespace.
      *
@@ -63,7 +57,6 @@ class MigrationGenerator extends Generator
     {
         return '';
     }
-
 
     /**
      * Get migration name.
@@ -75,7 +68,6 @@ class MigrationGenerator extends Generator
         return strtolower($this->name);
     }
 
-
     /**
      * Get file name.
      *
@@ -83,9 +75,8 @@ class MigrationGenerator extends Generator
      */
     public function getFileName()
     {
-        return date('Y_m_d_His_') . $this->getMigrationName();
+        return date('Y_m_d_His_').$this->getMigrationName();
     }
-
 
     /**
      * Get schema parser.
@@ -97,7 +88,6 @@ class MigrationGenerator extends Generator
         return new SchemaParser($this->fields);
     }
 
-
     /**
      * Get name parser.
      *
@@ -107,7 +97,6 @@ class MigrationGenerator extends Generator
     {
         return new NameParser($this->name);
     }
-
 
     /**
      * Get stub templates.
@@ -155,14 +144,14 @@ class MigrationGenerator extends Generator
         }
         $path = config('repository.generator.stubsOverridePath', __DIR__);
 
-        if (!file_exists($path . "/Stubs/migration/{$file}.stub")) {
+        if (!file_exists($path."/Stubs/migration/{$file}.stub")) {
             $path = __DIR__;
         }
 
-        if (!file_exists($path . "/Stubs/migration/{$file}.stub")) {
-            throw new FileNotFoundException($path . "/Stubs/migration/{$file}.stub");
+        if (!file_exists($path."/Stubs/migration/{$file}.stub")) {
+            throw new FileNotFoundException($path."/Stubs/migration/{$file}.stub");
         }
 
-        return Stub::create($path . "/Stubs/migration/{$file}.stub", $replacements);
+        return Stub::create($path."/Stubs/migration/{$file}.stub", $replacements);
     }
 }

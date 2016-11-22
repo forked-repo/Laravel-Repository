@@ -1,11 +1,11 @@
 <?php
+
 namespace Prettus\Repository\Generators;
 
 use Exception;
 
 /**
- * Class FileAlreadyExistsException
- * @package Prettus\Repository\Generators
+ * Class FileAlreadyExistsException.
  */
 class FileAlreadyExistsException extends Exception
 {

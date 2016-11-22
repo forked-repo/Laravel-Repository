@@ -1,11 +1,10 @@
 <?php
+
 namespace Prettus\Repository\Generators;
 
 /**
- * Class TransformerGenerator
- * @package Prettus\Repository\Generators
+ * Class TransformerGenerator.
  */
-
 class TransformerGenerator extends Generator
 {
     /**
@@ -22,7 +21,7 @@ class TransformerGenerator extends Generator
      */
     public function getRootNamespace()
     {
-        return parent::getRootNamespace() . parent::getConfigGeneratorClassPath($this->getPathConfigNode());
+        return parent::getRootNamespace().parent::getConfigGeneratorClassPath($this->getPathConfigNode());
     }
 
     /**
@@ -42,7 +41,7 @@ class TransformerGenerator extends Generator
      */
     public function getPath()
     {
-        return $this->getBasePath() . '/' . parent::getConfigGeneratorClassPath($this->getPathConfigNode(), true) . '/' . $this->getName() . 'Transformer.php';
+        return $this->getBasePath().'/'.parent::getConfigGeneratorClassPath($this->getPathConfigNode(), true).'/'.$this->getName().'Transformer.php';
     }
 
     /**
@@ -63,16 +62,16 @@ class TransformerGenerator extends Generator
     public function getReplacements()
     {
         $modelGenerator = new ModelGenerator([
-            'name' => $this->name
+            'name' => $this->name,
         ]);
-        $model = $modelGenerator->getRootNamespace() . '\\' . $modelGenerator->getName();
+        $model = $modelGenerator->getRootNamespace().'\\'.$modelGenerator->getName();
         $model = str_replace([
-            "\\",
-            '/'
+            '\\',
+            '/',
         ], '\\', $model);
 
         return array_merge(parent::getReplacements(), [
-            'model' => $model
+            'model' => $model,
         ]);
     }
 }

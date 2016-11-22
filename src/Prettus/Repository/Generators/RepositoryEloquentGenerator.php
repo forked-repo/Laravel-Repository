@@ -1,15 +1,14 @@
 <?php
+
 namespace Prettus\Repository\Generators;
 
 use Prettus\Repository\Generators\Migrations\SchemaParser;
 
 /**
- * Class RepositoryEloquentGenerator
- * @package Prettus\Repository\Generators
+ * Class RepositoryEloquentGenerator.
  */
 class RepositoryEloquentGenerator extends Generator
 {
-
     /**
      * Get stub name.
      *
@@ -24,7 +23,7 @@ class RepositoryEloquentGenerator extends Generator
      */
     public function getRootNamespace()
     {
-        return parent::getRootNamespace() . parent::getConfigGeneratorClassPath($this->getPathConfigNode());
+        return parent::getRootNamespace().parent::getConfigGeneratorClassPath($this->getPathConfigNode());
     }
 
     /**
@@ -44,7 +43,7 @@ class RepositoryEloquentGenerator extends Generator
      */
     public function getPath()
     {
-        return $this->getBasePath() . '/' . parent::getConfigGeneratorClassPath($this->getPathConfigNode(), true) . '/' . $this->getName() . 'RepositoryEloquent.php';
+        return $this->getBasePath().'/'.parent::getConfigGeneratorClassPath($this->getPathConfigNode(), true).'/'.$this->getName().'RepositoryEloquent.php';
     }
 
     /**
@@ -64,10 +63,10 @@ class RepositoryEloquentGenerator extends Generator
      */
     public function getReplacements()
     {
-        $repository = parent::getRootNamespace() . parent::getConfigGeneratorClassPath('interfaces') . '\\' . $this->name . 'Repository;';
+        $repository = parent::getRootNamespace().parent::getConfigGeneratorClassPath('interfaces').'\\'.$this->name.'Repository;';
         $repository = str_replace([
-            "\\",
-            '/'
+            '\\',
+            '/',
         ], '\\', $repository);
 
         return array_merge(parent::getReplacements(), [
@@ -75,7 +74,7 @@ class RepositoryEloquentGenerator extends Generator
             'use_validator' => $this->getValidatorUse(),
             'validator'     => $this->getValidatorMethod(),
             'repository'    => $repository,
-            'model'         => isset($this->options['model']) ? $this->options['model'] : ''
+            'model'         => isset($this->options['model']) ? $this->options['model'] : '',
         ]);
     }
 
@@ -89,13 +88,13 @@ class RepositoryEloquentGenerator extends Generator
         if (!$this->fillable) {
             return '[]';
         }
-        $results = '[' . PHP_EOL;
+        $results = '['.PHP_EOL;
 
         foreach ($this->getSchemaParser()->toArray() as $column => $value) {
-            $results .= "\t\t'{$column}'," . PHP_EOL;
+            $results .= "\t\t'{$column}',".PHP_EOL;
         }
 
-        return $results . "\t" . ']';
+        return $results."\t".']';
     }
 
     /**
@@ -115,7 +114,6 @@ class RepositoryEloquentGenerator extends Generator
         return "use {$validator};";
     }
 
-
     public function getValidator()
     {
         $validatorGenerator = new ValidatorGenerator([
@@ -124,15 +122,13 @@ class RepositoryEloquentGenerator extends Generator
             'force' => $this->force,
         ]);
 
-        $validator = $validatorGenerator->getRootNamespace() . '\\' . $validatorGenerator->getName();
+        $validator = $validatorGenerator->getRootNamespace().'\\'.$validatorGenerator->getName();
 
         return str_replace([
-            "\\",
-            '/'
-        ], '\\', $validator) . 'Validator';
-
+            '\\',
+            '/',
+        ], '\\', $validator).'Validator';
     }
-
 
     public function getValidatorMethod()
     {
@@ -142,7 +138,6 @@ class RepositoryEloquentGenerator extends Generator
 
         $class = $this->getClass();
 
-        return '/**' . PHP_EOL . '     * Specify Validator class name' . PHP_EOL . '     *' . PHP_EOL . '     * @return mixed' . PHP_EOL . '     */' . PHP_EOL . '    public function validator()' . PHP_EOL . '    {' . PHP_EOL . PHP_EOL . '        return ' . $class . 'Validator::class;' . PHP_EOL . '    }' . PHP_EOL;
-
+        return '/**'.PHP_EOL.'     * Specify Validator class name'.PHP_EOL.'     *'.PHP_EOL.'     * @return mixed'.PHP_EOL.'     */'.PHP_EOL.'    public function validator()'.PHP_EOL.'    {'.PHP_EOL.PHP_EOL.'        return '.$class.'Validator::class;'.PHP_EOL.'    }'.PHP_EOL;
     }
 }

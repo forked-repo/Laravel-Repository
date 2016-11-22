@@ -1,9 +1,9 @@
 <?php
+
 namespace Prettus\Repository\Contracts;
 
 /**
- * Interface Transformable
- * @package Prettus\Repository\Contracts
+ * Interface Transformable.
  */
 interface Transformable
 {

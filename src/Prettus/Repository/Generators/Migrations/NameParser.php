@@ -1,9 +1,9 @@
 <?php
+
 namespace Prettus\Repository\Generators\Migrations;
 
 /**
- * Class NameParser
- * @package Prettus\Repository\Generators\Migrations
+ * Class NameParser.
  */
 class NameParser
 {
@@ -27,22 +27,22 @@ class NameParser
     protected $actions = [
         'create' => [
             'create',
-            'make'
+            'make',
         ],
         'delete' => [
             'delete',
-            'remove'
+            'remove',
         ],
-        'add'    => [
+        'add' => [
             'add',
             'update',
             'append',
-            'insert'
+            'insert',
         ],
-        'drop'   => [
+        'drop' => [
             'destroy',
-            'drop'
-        ]
+            'drop',
+        ],
     ];
 
     /**

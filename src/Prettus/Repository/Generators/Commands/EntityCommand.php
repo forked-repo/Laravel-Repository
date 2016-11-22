@@ -1,4 +1,5 @@
 <?php
+
 namespace Prettus\Repository\Generators\Commands;
 
 use Illuminate\Console\Command;
@@ -8,7 +9,6 @@ use Symfony\Component\Console\Input\InputOption;
 
 class EntityCommand extends Command
 {
-
     /**
      * The name of command.
      *
@@ -28,15 +28,11 @@ class EntityCommand extends Command
      */
     protected $generators = null;
 
-
     /**
      * Execute the command.
-     *
-     * @return void
      */
     public function fire()
     {
-
         if ($this->confirm('Would you like to create a Presenter? [y|N]')) {
             $this->call('make:presenter', [
                 'name'    => $this->argument('name'),
@@ -62,7 +58,7 @@ class EntityCommand extends Command
             // Generate a controller resource
             $this->call('make:resource', [
                 'name'    => $this->argument('name'),
-                '--force' => $this->option('force')
+                '--force' => $this->option('force'),
             ]);
         }
 
@@ -71,15 +67,14 @@ class EntityCommand extends Command
             '--fillable'  => $this->option('fillable'),
             '--rules'     => $this->option('rules'),
             '--validator' => $validator,
-            '--force'     => $this->option('force')
+            '--force'     => $this->option('force'),
         ]);
 
         $this->call('make:bindings', [
             'name'    => $this->argument('name'),
-            '--force' => $this->option('force')
+            '--force' => $this->option('force'),
         ]);
     }
-
 
     /**
      * The array of command arguments.
@@ -93,11 +88,10 @@ class EntityCommand extends Command
                 'name',
                 InputArgument::REQUIRED,
                 'The name of class being generated.',
-                null
+                null,
             ],
         ];
     }
-
 
     /**
      * The array of command options.
@@ -112,29 +106,29 @@ class EntityCommand extends Command
                 null,
                 InputOption::VALUE_OPTIONAL,
                 'The fillable attributes.',
-                null
+                null,
             ],
             [
                 'rules',
                 null,
                 InputOption::VALUE_OPTIONAL,
                 'The rules of validation attributes.',
-                null
+                null,
             ],
             [
                 'validator',
                 null,
                 InputOption::VALUE_OPTIONAL,
                 'Adds validator reference to the repository.',
-                null
+                null,
             ],
             [
                 'force',
                 'f',
                 InputOption::VALUE_NONE,
                 'Force the creation if file already exists.',
-                null
-            ]
+                null,
+            ],
         ];
     }
 }
