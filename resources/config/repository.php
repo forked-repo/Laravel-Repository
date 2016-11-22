@@ -1,11 +1,5 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| BrianFaust Repository Config
-|--------------------------------------------------------------------------
-|
-|
-*/
+
 return [
 
     /*
@@ -116,7 +110,7 @@ return [
             |--------------------------------------------------------------------------
             |
             |
-            | Ex: http://prettus.local/?search=lorem&skipCache=true
+            | Ex: http://local.dev/?search=lorem&skipCache=true
             |
             */
             'skipCache' => 'skipCache',
@@ -181,26 +175,26 @@ return [
         | Params :
         |
         | - search : Searched value
-        |   Ex: http://prettus.local/?search=lorem
+        |   Ex: http://local.dev/?search=lorem
         |
         | - searchFields : Fields in which research should be carried out
         |   Ex:
-        |    http://prettus.local/?search=lorem&searchFields=name;email
-        |    http://prettus.local/?search=lorem&searchFields=name:like;email
-        |    http://prettus.local/?search=lorem&searchFields=name:like
+        |    http://local.dev/?search=lorem&searchFields=name;email
+        |    http://local.dev/?search=lorem&searchFields=name:like;email
+        |    http://local.dev/?search=lorem&searchFields=name:like
         |
         | - filter : Fields that must be returned to the response object
         |   Ex:
-        |   http://prettus.local/?search=lorem&filter=id,name
+        |   http://local.dev/?search=lorem&filter=id,name
         |
         | - orderBy : Order By
         |   Ex:
-        |   http://prettus.local/?search=lorem&orderBy=id
+        |   http://local.dev/?search=lorem&orderBy=id
         |
         | - sortedBy : Sort
         |   Ex:
-        |   http://prettus.local/?search=lorem&orderBy=id&sortedBy=asc
-        |   http://prettus.local/?search=lorem&orderBy=id&sortedBy=desc
+        |   http://local.dev/?search=lorem&orderBy=id&sortedBy=asc
+        |   http://local.dev/?search=lorem&orderBy=id&sortedBy=desc
         |
         */
         'params' => [
@@ -212,6 +206,7 @@ return [
             'with'         => 'with',
         ],
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Generator Config
