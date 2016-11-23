@@ -243,7 +243,7 @@ class RequestCriteria implements CriteriaInterface
 
             if (count($fields) == 0) {
                 throw new \Exception(sprintf('Columns %s are not accepted in the research', [
-                    'field' => implode(',', $searchFields)
+                    'field' => implode(',', $searchFields),
                 ]));
             }
         }
