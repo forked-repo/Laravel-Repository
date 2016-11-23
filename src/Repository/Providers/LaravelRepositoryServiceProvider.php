@@ -22,14 +22,14 @@ class LaravelRepositoryServiceProvider extends ServiceProvider
         $this->mergeConfig();
 
         $this->commands([
-            Generators\Commands\RepositoryCommand::class
-            Generators\Commands\TransformerCommand::class
-            Generators\Commands\PresenterCommand::class
-            Generators\Commands\EntityCommand::class
-            Generators\Commands\ValidatorCommand::class
-            Generators\Commands\ControllerCommand::class
-            Generators\Commands\BindingsCommand::class
-            Generators\Commands\CriteriaCommand::class
+            Generators\Commands\RepositoryCommand::class,
+            Generators\Commands\TransformerCommand::class,
+            Generators\Commands\PresenterCommand::class,
+            Generators\Commands\EntityCommand::class,
+            Generators\Commands\ValidatorCommand::class,
+            Generators\Commands\ControllerCommand::class,
+            Generators\Commands\BindingsCommand::class,
+            Generators\Commands\CriteriaCommand::class,
         ]);
 
         $this->app->register(Providers\EventServiceProvider::class);
