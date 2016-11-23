@@ -18,6 +18,11 @@ class RequestCriteria implements CriteriaInterface
      */
     protected $request;
 
+    /**
+     * RequestCriteria constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -206,6 +211,14 @@ class RequestCriteria implements CriteriaInterface
         return $search;
     }
 
+    /**
+     * @param array      $fields
+     * @param array|null $searchFields
+     *
+     * @throws \Exception
+     *
+     * @return array
+     */
     protected function parserFieldsSearch(array $fields = [], array $searchFields = null)
     {
         if (!is_null($searchFields) && count($searchFields)) {

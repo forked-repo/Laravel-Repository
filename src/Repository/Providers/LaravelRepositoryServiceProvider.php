@@ -35,6 +35,9 @@ class LaravelRepositoryServiceProvider extends ServiceProvider
         $this->app->register(Providers\EventServiceProvider::class);
     }
 
+    /**
+     * @return string
+     */
     protected function getPackageName()
     {
         return 'laravel-repository';

@@ -5,6 +5,9 @@ namespace BrianFaust\Repository\Generators;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 
+/**
+ * Class Generator.
+ */
 abstract class Generator
 {
     /**

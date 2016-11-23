@@ -4,6 +4,9 @@ namespace BrianFaust\Repository\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class EventServiceProvider.
+ */
 class EventServiceProvider extends ServiceProvider
 {
     /**

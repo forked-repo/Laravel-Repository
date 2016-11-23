@@ -12,6 +12,9 @@ use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
+/**
+ * Class RepositoryCommand.
+ */
 class RepositoryCommand extends Command
 {
     /**

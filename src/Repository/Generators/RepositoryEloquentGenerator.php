@@ -107,6 +107,9 @@ class RepositoryEloquentGenerator extends Generator
         return new SchemaParser($this->fillable);
     }
 
+    /**
+     * @return string
+     */
     public function getValidatorUse()
     {
         $validator = $this->getValidator();
@@ -114,6 +117,9 @@ class RepositoryEloquentGenerator extends Generator
         return "use {$validator};";
     }
 
+    /**
+     * @return string
+     */
     public function getValidator()
     {
         $validatorGenerator = new ValidatorGenerator([
@@ -130,6 +136,9 @@ class RepositoryEloquentGenerator extends Generator
         ], '\\', $validator).'Validator';
     }
 
+    /**
+     * @return string
+     */
     public function getValidatorMethod()
     {
         if ($this->validator != 'yes') {

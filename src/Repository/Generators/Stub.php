@@ -13,12 +13,14 @@ class Stub
      * @var null|string
      */
     protected static $basePath = null;
+
     /**
      * The stub path.
      *
      * @var string
      */
     protected $path;
+
     /**
      * The replacements array.
      *

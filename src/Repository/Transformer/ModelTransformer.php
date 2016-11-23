@@ -10,6 +10,11 @@ use League\Fractal\TransformerAbstract;
  */
 class ModelTransformer extends TransformerAbstract
 {
+    /**
+     * @param Transformable $model
+     *
+     * @return array
+     */
     public function transform(Transformable $model)
     {
         return $model->transform();
