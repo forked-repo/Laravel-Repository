@@ -44,10 +44,6 @@ abstract class FractalPresenter implements PresenterInterface
      */
     public function __construct()
     {
-        if (!class_exists('League\Fractal\Manager')) {
-            throw new Exception(trans('repository::packages.league_fractal_required'));
-        }
-
         $this->fractal = new Manager();
         $this->parseIncludes();
         $this->setupSerializer();
@@ -112,10 +108,6 @@ abstract class FractalPresenter implements PresenterInterface
      */
     public function present($data)
     {
-        if (!class_exists('League\Fractal\Manager')) {
-            throw new Exception(trans('repository::packages.league_fractal_required'));
-        }
-
         if ($data instanceof EloquentCollection) {
             $this->resource = $this->transformCollection($data);
         } elseif ($data instanceof AbstractPaginator) {

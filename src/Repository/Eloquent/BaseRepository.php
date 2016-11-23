@@ -129,15 +129,12 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
     public function validator()
     {
         if (isset($this->rules) && !is_null($this->rules) && is_array($this->rules) && !empty($this->rules)) {
-            if (class_exists('BrianFaust\Validator\LaravelValidator')) {
-                $validator = app('BrianFaust\Validator\LaravelValidator');
-                if ($validator instanceof ValidatorInterface) {
-                    $validator->setRules($this->rules);
+            $validator = app('BrianFaust\Validator\LaravelValidator');
 
-                    return $validator;
-                }
-            } else {
-                throw new Exception(trans('repository::packages.faustbrian_laravel_validation_required'));
+            if ($validator instanceof ValidatorInterface) {
+                $validator->setRules($this->rules);
+
+                return $validator;
             }
         }
     }
