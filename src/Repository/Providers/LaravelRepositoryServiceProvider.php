@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class RepositoryServiceProvider.
  */
-class RepositoryServiceProvider extends ServiceProvider
+class LaravelRepositoryServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

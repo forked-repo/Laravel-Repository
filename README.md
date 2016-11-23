@@ -28,14 +28,14 @@ And then include the service provider within `app/config/app.php`.
 ```php
 'providers' => [
     ...
-    BrianFaust\Repository\Providers\RepositoryServiceProvider::class,
+    BrianFaust\Repository\Providers\LaravelRepositoryServiceProvider::class,
 ],
 ```
 
 To get started, you'll need to publish the vendor assets:
 
 ```shell
-php artisan vendor:publish --provider="BrianFaust\Repository\Providers\RepositoryServiceProvider"
+php artisan vendor:publish --provider="BrianFaust\Repository\Providers\LaravelRepositoryServiceProvider"
 ```
 
 ### Lumen
