@@ -2,29 +2,16 @@
 
 namespace BrianFaust\Repository\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use BrianFaust\ServiceProvider\ServiceProvider;
 
 /**
- * Class RepositoryServiceProvider.
+ * Class LaravelRepositoryServiceProvider.
  */
 class LaravelRepositoryServiceProvider extends ServiceProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
-
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../../../resources/config/repository.php' => config_path('repository.php'),
-        ]);
-
-        $this->mergeConfigFrom(__DIR__.'/../../../resources/config/repository.php', 'repository');
-
-        $this->loadTranslationsFrom(__DIR__.'/../../../resources/lang', 'repository');
+        $this->publishConfig();
     }
 
     /**
@@ -32,24 +19,24 @@ class LaravelRepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->commands('BrianFaust\Repository\Generators\Commands\RepositoryCommand');
-        $this->commands('BrianFaust\Repository\Generators\Commands\TransformerCommand');
-        $this->commands('BrianFaust\Repository\Generators\Commands\PresenterCommand');
-        $this->commands('BrianFaust\Repository\Generators\Commands\EntityCommand');
-        $this->commands('BrianFaust\Repository\Generators\Commands\ValidatorCommand');
-        $this->commands('BrianFaust\Repository\Generators\Commands\ControllerCommand');
-        $this->commands('BrianFaust\Repository\Generators\Commands\BindingsCommand');
-        $this->commands('BrianFaust\Repository\Generators\Commands\CriteriaCommand');
-        $this->app->register('BrianFaust\Repository\Providers\EventServiceProvider');
+        $this->mergeConfig();
+
+        $this->commands([
+            Generators\Commands\RepositoryCommand::class
+            Generators\Commands\TransformerCommand::class
+            Generators\Commands\PresenterCommand::class
+            Generators\Commands\EntityCommand::class
+            Generators\Commands\ValidatorCommand::class
+            Generators\Commands\ControllerCommand::class
+            Generators\Commands\BindingsCommand::class
+            Generators\Commands\CriteriaCommand::class
+        ]);
+
+        $this->app->register(Providers\EventServiceProvider::class);
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
+    protected function getPackageName()
     {
-        return [];
+        return 'laravel-repository';
     }
 }
