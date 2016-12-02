@@ -26,16 +26,13 @@ $ composer require faustbrian/laravel-repository
 And then include the service provider within `app/config/app.php`.
 
 ```php
-'providers' => [
-    ...
-    BrianFaust\Repository\Providers\LaravelRepositoryServiceProvider::class,
-],
+BrianFaust\Repository\LaravelRepositoryServiceProvider::class,
 ```
 
 To get started, you'll need to publish the vendor assets:
 
 ```shell
-php artisan vendor:publish --provider="BrianFaust\Repository\Providers\LaravelRepositoryServiceProvider"
+php artisan vendor:publish --provider="BrianFaust\Repository\LaravelRepositoryServiceProvider"
 ```
 
 ### Lumen
@@ -43,13 +40,13 @@ php artisan vendor:publish --provider="BrianFaust\Repository\Providers\LaravelRe
 And then include the service provider within `bootstrap/app.php`.
 
 ```php
-$app->register(BrianFaust\Repository\Providers\LumenRepositoryServiceProvider::class);
+$app->register(BrianFaust\Repository\LumenRepositoryServiceProvider::class);
 ```
 
 To get started, you'll need to publish the vendor assets:
 
 ```shell
-php artisan vendor:publish --provider="BrianFaust\Repository\Providers\LumenRepositoryServiceProvider"
+php artisan vendor:publish --provider="BrianFaust\Repository\LumenRepositoryServiceProvider"
 ```
 
 ## Usage
