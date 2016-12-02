@@ -9,9 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Repository\Providers;
-
-use Illuminate\Support\ServiceProvider;
+namespace BrianFaust\Repository;
 
 /**
  * Class EventServiceProvider.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Repository\Providers;
+namespace BrianFaust\Repository;
 
 use Illuminate\Support\ServiceProvider;
 
